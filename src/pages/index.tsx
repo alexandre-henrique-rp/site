@@ -1,23 +1,20 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
+
 const IndexPage: React.FC<PageProps> = () => {
   const data = new Date();
-  return <>{data.toISOString()}</>;
+  return (
+    <>
+      
+      {data.toISOString()}
+    </>
+  );
 };
 
 export default IndexPage;
 
 export const Head: HeadFC = () => {
-  const data = new Date();
-  // const dataLayer = window.dataLayer || [];
-  // function gtag() {
-  //   dataLayer.push(arguments);
-  // }
-  // gtag(data);
-
-  // gtag("config", "G-FJ6N33B7LZ");
-
   return (
     <>
       <meta charSet="utf-8" />

@@ -24,6 +24,7 @@ const codeStyles = {
 }
 
 const NotFoundPage: React.FC<PageProps> = () => {
+  console.log(location.pathname)
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
