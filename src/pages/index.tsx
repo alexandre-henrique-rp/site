@@ -1,14 +1,18 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-
+import { Box } from "@chakra-ui/react";
+import { Hero } from "../components/hero";
+import { Footer } from "../components/footer";
 
 const IndexPage: React.FC<PageProps> = () => {
-  const data = new Date();
   return (
-    <>
-      
-      {data.toISOString()}
-    </>
+    <Box h={"100vh"}>
+      <Hero />
+      <Box bg={"#272727"}>
+
+      </Box>
+      <Footer />
+    </Box>
   );
 };
 
@@ -43,7 +47,7 @@ export const Head: HeadFC = () => {
         property="og:description"
         content="Desenvolvemos Sites e Sistemas Web 100% Personalizados"
       />
-      
+
       <meta property="article:author" content="king Dev" />
 
       <meta name="twitter:card" content="summary" />
