@@ -11,6 +11,13 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        fileExtensions: [`webp`, `avif`, `jpg`, `jpeg`, `png`, `svg`],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {
         /**
@@ -23,6 +30,12 @@ const config: GatsbyConfig = {
          * if false, this plugin will not use <ColorModeProvider />
          */
         isUsingColorMode: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/components/images`,
       },
     },
   ],

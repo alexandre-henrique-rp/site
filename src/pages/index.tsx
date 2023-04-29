@@ -6,7 +6,7 @@ import { Footer } from "../components/footer";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <Box h={"100vh"}>
+    <Box bg={"#070707"} h={"100vh"} maxW={'100%'}>
       <Hero />
       <Box bg={"#272727"}>
 
